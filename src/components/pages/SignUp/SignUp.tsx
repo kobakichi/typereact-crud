@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom"
 import { Input, Button, Loader } from "semantic-ui-react"
 import { ChangeEvent, memo, useContext, useState, VFC } from "react"
 import React from "react"
+import { UserContext } from "../../../providers/UserProviders"
+import { postLoginUser, postRegisterUser } from "../../../api/userRequest"
 
 export const SignUp: VFC = memo(() => {
   const navigate = useNavigate()
@@ -43,7 +45,7 @@ export const SignUp: VFC = memo(() => {
       const signinResult = await postRegisterUser(username, password)
       if (signinResult) {
         const signupResult = await postLoginUser(
-          signinResult.username,
+          signinResult.user_name,
           password
         )
         if (signupResult) {
