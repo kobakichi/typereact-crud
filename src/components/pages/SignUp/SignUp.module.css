@@ -21,3 +21,8 @@
 .signupbutton {
   width: 100%;
 }
+
+.errorMessage {
+  font-size: small;
+  color: red;
+}
