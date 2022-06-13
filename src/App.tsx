@@ -1,13 +1,8 @@
-import React from "react";
-import "./App.css";
-import { InputForm } from "./components/InputForm";
+import React from "react"
+import "./App.css"
 
 function App() {
-  return (
-    <div className="main">
-      <InputForm />
-    </div>
-  );
+  return <div className='main'></div>
 }
 
-export default App;
+export default App
